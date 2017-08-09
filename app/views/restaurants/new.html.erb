@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>Create a restaurant</h1>
+      <%= simple_form_for @restaurant do |r| %>
+        <%= r.input :name %>
+        <%= r.input :address %>
+        <%= r.input :phone_number %>
+        <%= r.input :category, collection: Restaurant::CATEGORIES %>
+        <%= r.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

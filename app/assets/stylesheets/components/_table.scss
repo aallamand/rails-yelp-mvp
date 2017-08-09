@@ -1,0 +1,40 @@
+.table-representation {
+  margin-top: 100px;
+
+  table {
+    margin: auto;
+  }
+
+  tr:first-child {
+    border-bottom: 1px solid grey;
+  }
+
+  td {
+    padding: 15px 25px;
+  }
+  td a {
+    text-decoration: none;
+    color: inherit;
+  }
+  td a:hover {
+    color: red;
+    opacity: 0.6;
+  }
+}
+
+.table-review {
+  margin-top: 40px;
+
+  table {
+    margin: auto;
+  }
+
+  tr:first-child {
+    border-bottom: 1px solid grey;
+  }
+
+  td {
+    padding: 15px 50px;
+  }
+}
+

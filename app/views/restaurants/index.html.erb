@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="table-representation">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Phone Number</td>
+            <td>Category</td>
+            <td></td>
+          </tr>
+          <% @restaurants.each do |restaurant| %>
+          <tr>
+            <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+            <td><%= restaurant.address %></td>
+            <td><%= restaurant.phone_number %></td>
+            <td><%= restaurant.category.capitalize %></td>
+            <td>
+              <%= link_to new_restaurant_review_path(restaurant) do %>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
